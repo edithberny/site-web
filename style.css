@@ -106,7 +106,7 @@ h1 {
 
 @media screen and (max-width: 50em) {
     .hero_desc {
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: black;
         text-shadow: 0 0 3px #fff;
         }
@@ -114,5 +114,14 @@ h1 {
     #about, #services, #portfolio, #contact {
         margin-top: 1rem;
         padding-top: 1rem;
+        }
+    .bgimage {
+        height:50vh;
+        background: url('images/fond2.png');
+        background-size:cover;
+        position:relative;
+        }    
+    .center-animation {
+        margin-top: 10rem;
         }
     }
