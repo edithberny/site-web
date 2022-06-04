@@ -60,6 +60,7 @@
 /* about section image css */
 .imageAboutPage {
     width: 100%;
+    box-shadow: 5px 5px darkslategrey;
 }
 
 /* services section css */
