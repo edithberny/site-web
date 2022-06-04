@@ -124,4 +124,9 @@ h1 {
     .center-animation {
         margin-top: 10rem;
         }
+    .mobile-scroll {
+        height: auto;
+        width: 50%;
+        position: relative;
+        }
     }
