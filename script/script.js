@@ -17,3 +17,10 @@ const menuToggle = document.getElementById('navbarSupportedContent')
 navLinks.forEach((l) => {
     l.addEventListener('click', () => { new bootstrap.Collapse(menuToggle).toggle() })
 })
+
+// this year automatically in footer
+const year = new Date();
+
+const date = year.getFullYear();
+
+document.getElementById("year").innerHTML = date;
