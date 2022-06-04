@@ -61,6 +61,7 @@
 .imageAboutPage {
     width: 100%;
     box-shadow: 5px 5px darkslategrey;
+    border-radius: 10px;
 }
 
 /* services section css */
