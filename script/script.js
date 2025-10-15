@@ -24,3 +24,17 @@ const year = new Date();
 const date = year.getFullYear();
 
 document.getElementById("year").innerHTML = date;
+
+// dynamic age calculation
+const birthDate = new Date(1975, 11, 18); // months are 0-indexed (11 = December)
+const today = new Date();
+let age = today.getFullYear() - birthDate.getFullYear();
+const hasHadBirthdayThisYear = (today.getMonth() > birthDate.getMonth()) ||
+    (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+if (!hasHadBirthdayThisYear) {
+    age -= 1;
+}
+const ageSpan = document.getElementById('age');
+if (ageSpan) {
+    ageSpan.textContent = age.toString();
+}

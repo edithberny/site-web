@@ -1,10 +1,38 @@
 /* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: black;
+    background-color: rgba(20, 20, 20, 0.85);
+    backdrop-filter: saturate(140%) blur(8px);
+    -webkit-backdrop-filter: saturate(140%) blur(8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 .nav-color {
-    background-color: #000000bf;
-    border-radius: 10px;
+    background-color: rgba(20, 20, 20, 0.6);
+    border-radius: 14px;
+    backdrop-filter: saturate(150%) blur(6px);
+    -webkit-backdrop-filter: saturate(150%) blur(6px);
+}
+/* navbar links modern hover */
+.navbar .nav-link {
+    position: relative;
+    color: #f5f5f5;
+}
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #00a884;
+    transition: width .25s ease;
+}
+.navbar .nav-link:hover::after,
+.navbar .nav-link:focus::after {
+    width: 100%;
+}
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: .3px;
 }
 
 /* hero background image */
@@ -82,6 +110,26 @@
 }
 .servicesText:hover {
     border: 1px solid #008000;
+}
+
+/* modern lists with icons */
+.modern-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.modern-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: .6rem;
+    margin-bottom: .5rem;
+}
+.modern-list .icon {
+    color: #00a884;
+    margin-top: .2rem;
+}
+.modern-list span {
+    line-height: 1.5;
 }
 
 /* social media icons styling */
