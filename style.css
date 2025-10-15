@@ -35,6 +35,40 @@
     letter-spacing: .3px;
 }
 
+/* typographic logo */
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: .7rem;
+    text-decoration: none;
+}
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00a884, #007e65);
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+.brand-text {
+    display: grid;
+    line-height: 1.1;
+}
+.brand-name {
+    color: #f5f5f5;
+    font-weight: 700;
+}
+.brand-sub {
+    color: #b8d6ce;
+    font-size: .85rem;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
 /* hero background image */
 .bgimage {
     height:90vh;
