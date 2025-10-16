@@ -69,6 +69,13 @@
     letter-spacing: .08em;
 }
 
+/* brand image size */
+.brand-img {
+    height: 36px;
+    width: auto;
+    display: block;
+}
+
 /* hero background image */
 .bgimage {
     height:90vh;
