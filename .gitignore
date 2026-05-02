@@ -1,0 +1,17 @@
+# Reference / scratch folders (kept locally, not versioned)
+site web edith berny/
+.vscode/site web edith berny/
+
+# OS junk
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Node / build (not used today, anticipatory)
+node_modules/
+dist/
+.cache/

@@ -51,7 +51,7 @@ site-web/
 │   ├── retraite.webp        # carte « Retraite »
 │   ├── succession.webp      # carte « Succession »
 │   └── accompagnement.webp  # carte « Accompagnement »
-└── site web edith berny/   # version de référence du design (conservée)
+└── (.gitignore — exclut .DS_Store, .vscode/, node_modules/, etc.)
 ```
 
 ## Déploiement
