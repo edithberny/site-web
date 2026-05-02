@@ -202,8 +202,6 @@ nav.scrolled {
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
-/* Scroll-lock when mobile menu is open */
-body.menu-open { overflow: hidden; }
 
 /* ── Hero ──────────────────────────────────────────────── */
 #home {
@@ -946,15 +944,15 @@ footer {
     top: 72px;
     left: 0;
     right: 0;
-    bottom: 0;
-    height: calc(100vh - 72px);
-    height: calc(100dvh - 72px);
     background: var(--ivory);
-    padding: 2rem var(--side);
-    gap: 1.5rem;
+    padding: 1.25rem var(--side) 1.5rem;
+    gap: 1rem;
     align-items: flex-start;
     border-top: 1px solid var(--stone);
+    border-bottom: 1px solid var(--stone);
+    box-shadow: 0 8px 24px -12px rgba(0, 0, 0, .15);
     z-index: 99;
+    max-height: calc(100dvh - 72px);
     overflow-y: auto;
     overscroll-behavior: contain;
   }
@@ -967,7 +965,7 @@ footer {
   .nav-links.open .nav-cta {
     color: var(--gold) !important;
     border-color: var(--gold);
-    margin-top: .5rem;
+    margin-top: .25rem;
   }
   .nav-toggle { display: flex; }
 }

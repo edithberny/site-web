@@ -165,12 +165,16 @@
     const links = document.getElementById('navLinks');
     const setMenu = open => {
       links.classList.toggle('open', open);
-      document.body.classList.toggle('menu-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
     };
-    toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+    toggle.addEventListener('click', e => { e.stopPropagation(); setMenu(!links.classList.contains('open')); });
     links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('click', e => {
+      if (!links.classList.contains('open')) return;
+      if (links.contains(e.target) || toggle.contains(e.target)) return;
+      setMenu(false);
+    });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && links.classList.contains('open')) setMenu(false); });
   </script>
 
