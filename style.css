@@ -595,11 +595,19 @@ nav.scrolled {
   background: var(--ivory);
 }
 
+.temoignages-intro {
+  font-size: .9rem;
+  color: var(--ink3);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-top: 1.25rem;
+}
+
 .temoignages-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin-top: clamp(3rem, 5vw, 4rem);
+  margin-top: clamp(2.5rem, 4vw, 3.5rem);
 }
 
 .temoignage {
@@ -608,7 +616,24 @@ nav.scrolled {
   border: 1px solid var(--stone);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
+}
+
+.temoignage-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.temoignage-stars {
+  color: var(--gold);
+  font-size: .95rem;
+  letter-spacing: .15em;
+  line-height: 1;
+}
+.temoignage-source {
+  flex-shrink: 0;
+  opacity: .9;
 }
 
 .temoignage-quote {
@@ -618,6 +643,7 @@ nav.scrolled {
   font-style: italic;
   color: var(--ink);
   line-height: 1.7;
+  margin: 0;
 }
 
 .temoignage-author {
@@ -626,17 +652,37 @@ nav.scrolled {
   gap: .2rem;
   border-top: 1px solid var(--stone);
   padding-top: 1rem;
+  margin-top: auto;
+  background: transparent;
+  color: inherit;
 }
 .temoignage-name {
   font-size: .82rem;
   font-weight: 500;
   color: var(--ink);
+  font-style: normal;
+  text-decoration: none;
+  transition: color .2s;
+  display: inline-block;
+  align-self: flex-start;
 }
+a.temoignage-name:hover { color: var(--gold); }
 .temoignage-role {
   font-size: .75rem;
   color: var(--ink3);
   letter-spacing: .04em;
+  font-style: normal;
 }
+
+.temoignages-cta-wrap {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  display: flex;
+  justify-content: center;
+}
+.temoignages-cta {
+  gap: .55rem;
+}
+.temoignages-cta svg { flex-shrink: 0; }
 
 /* ── FAQ ───────────────────────────────────────────────── */
 #faq {
