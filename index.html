@@ -1,292 +1,571 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Edith Berny - Conseillère en gestion de patrimoine.</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="images/favicons/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <!-- balises opengraph pour les réseaux sociaux si tu partages ton lien -->
-        <meta property="og:title" content="Edith Berny - Conseillère en gestion de patrimoine" />
-        <meta property="og:url" content="https://edithberny.netlify.app" />
-        <meta property="og:image" content="https://edithberny.netlify.app/images/profile_picture.jpg" />
-        <meta property="og:description" content="Edith Berny.Je suis à votre écoute pour vous accompagner dans la construction, la gestion, l'optimisation et la transmission de votre patrimoine, en tant que conseillère indépendante." />
-        <!-- description -->
-        <meta name="description" content="Edith Berny.Je suis à votre écoute pour vous accompagner dans la construction, la gestion, l'optimisation et la transmission de votre patrimoine, en tant que conseillère indépendante.">
-        <!-- keywords -->
-        <meta name="keywords" content="edith, berny, gestion, patrimoine, optimisation, succession, épargne, réduction, impôts, fiscal, fiscalité, budget">
-        <meta name="robots" content="index, follow">
-        <!-- favicons -->
-        <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="images/favicons/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicons/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicons//favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="images/favicons//favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicons//favicon-16x16.png">
-        <link rel="manifest" href="images/favicons/manifest.json">
-        <!-- linking css file -->
-        <link rel="stylesheet" href="style.css">
-        <!-- bootstrap CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- font awesome -->
-        <script src="https://kit.fontawesome.com/e5dd6832e5.js" crossorigin="anonymous"></script>
-    </head>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edith Berny | Conseillère en gestion de patrimoine à Meaux (77) — Île-de-France</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Edith Berny, conseillère indépendante en gestion de patrimoine à Meaux (77) et en Île-de-France. Épargne, retraite, immobilier, défiscalisation, succession, transmission. Indépendante, ORIAS 22002433.">
+  <meta name="keywords" content="conseiller en gestion de patrimoine Meaux, CGP Meaux, gestion privée 77, Seine-et-Marne, Île-de-France, Edith Berny, conseillère indépendante, épargne, retraite, assurance-vie, assurance-vie luxembourgeoise, immobilier, SCPI, LMNP, défiscalisation, succession, transmission patrimoine, optimisation fiscale">
+  <meta name="author" content="Edith Berny">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FAF8F5">
+  <meta name="geo.region" content="FR-77">
+  <meta name="geo.placename" content="Meaux">
+  <link rel="canonical" href="https://edithberny.netlify.app/">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Edith Berny — Conseillère en gestion de patrimoine">
+  <meta property="og:url" content="https://edithberny.netlify.app">
+  <meta property="og:image" content="https://edithberny.netlify.app/assets/profile_picture.webp">
+  <meta property="og:description" content="Conseillère indépendante en gestion de patrimoine. Épargne, retraite, immobilier, défiscalisation, succession — Meaux et Île-de-France.">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Edith Berny — Conseillère en gestion de patrimoine">
+  <meta name="twitter:description" content="Conseillère indépendante en gestion de patrimoine. Épargne, retraite, immobilier, défiscalisation, succession — Meaux et Île-de-France.">
+  <meta name="twitter:image" content="https://edithberny.netlify.app/assets/profile_picture.webp">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="sitemap" type="application/xml" title="Plan du site" href="sitemap.xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Preload LCP candidate -->
+  <link rel="preload" as="image" href="assets/profile_picture.webp" fetchpriority="high">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
-        <div class="container nav-color">
-            <a class="navbar-brand brand-logo" href="#home">
-                <img src="images/logo.png" alt="Edith Berny Patrimoine" class="brand-img">
-                <span class="brand-name">Edith Berny Patrimoine</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+
+  <!-- ── Navigation ────────────────────────────────────── -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">
+        <span class="name">Edith Berny</span>
+        <span class="sub">Gestion de patrimoine</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#services">Expertises</a></li>
+        <li><a href="#approche">Approche</a></li>
+        <li><a href="#rendez-vous" class="nav-cta">Prendre rendez-vous</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ──────────────────────────────────────────── -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title">L'expertise d'une <em>conseillère privée,</em><br>à votre écoute.</h1>
+      <p class="hero-eyebrow">Conseillère indépendante en gestion de patrimoine</p>
+      <p class="hero-desc">Construire, optimiser, transmettre votre patrimoine — avec rigueur, indépendance et discrétion.</p>
+      <div class="hero-actions">
+        <a href="#rendez-vous" class="btn-primary">Prendre rendez-vous</a>
+        <a href="#about" class="btn-ghost">Découvrir mon approche</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="val">100%</div>
+          <div class="lbl">Indépendante</div>
+        </div>
+        <div class="hero-stat">
+          <div class="val">Tous profils</div>
+          <div class="lbl">Salariés, indépendants, fonctionnaires</div>
+        </div>
+        <div class="hero-stat">
+          <div class="val">Île-de-France</div>
+          <div class="lbl">Basée à Meaux</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── À propos ───────────────────────────────────────── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-wrap">
+            <img src="assets/profile_picture.webp" alt="Edith Berny, conseillère indépendante en gestion de patrimoine à Meaux (77)" fetchpriority="high" width="1000" height="1000">
+          </div>
+          <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=Meaux&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" title="Localisation Meaux" loading="lazy"></iframe>
+          </div>
+          <a href="https://share.google/9w6bGB4XbKCmkHkI8" target="_blank" rel="noopener" class="map-cta" aria-label="Voir ma fiche Google Business (nouvel onglet)">
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Voir ma fiche Google
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+        </div>
+        <div class="about-text">
+          <p class="label">Conseillère gestion privée</p>
+          <div class="divider"></div>
+          <h2 class="section-title">Edith Berny</h2>
+
+          <div class="about-section">
+            <h3 class="about-subhead">Présentation</h3>
+            <p>Conseillère en gestion privée, j'accompagne particuliers, dirigeants et professions libérales dans la définition et la mise en œuvre de leur stratégie patrimoniale.</p>
+            <p>Au sein de <a href="https://www.maisonblanchepatrimoine.com/" target="_blank" rel="noopener" style="color: var(--gold);">Maison Blanche Patrimoine</a>, j'interviens sur les volets investissement, fiscalité et transmission, avec une approche globale tenant compte des dimensions juridiques et financières.</p>
+            <p>Mon approche privilégie la pédagogie, l'écoute et la construction d'une relation de confiance dans la durée, pour que chaque décision soit prise en pleine conscience.</p>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-subhead">Domaines d'expertise</h3>
+            <ul class="about-skills">
+              <li>Stratégie d'investissement financier</li>
+              <li>Assurance-vie française et luxembourgeoise</li>
+              <li>Structuration patrimoniale</li>
+              <li>Optimisation fiscale</li>
+              <li>Transmission du patrimoine</li>
+            </ul>
+          </div>
+
+          <div class="about-section">
+            <h3 class="about-subhead">Zones d'intervention</h3>
+            <p>Meaux (77100), Seine-et-Marne et toute l'<strong>Île-de-France</strong>.<br>Rendez-vous en visioconférence ou en présentiel selon votre préférence.</p>
+          </div>
+
+          <div class="about-section about-contact" id="rendez-vous">
+            <h3 class="about-subhead">Ligne directe</h3>
+            <address>
+              <a href="mailto:edith.berny@maisonblanchepatrimoine.com">edith.berny@maisonblanchepatrimoine.com</a><br>
+              <a href="tel:+33613013881">06 13 01 38 81</a><br>
+              <a href="https://www.linkedin.com/in/edithberny/" target="_blank" rel="noopener">linkedin.com/in/edithberny</a>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Expertises ─────────────────────────────────────── -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="services-header">
+        <div>
+          <p class="label">Domaines d'expertise</p>
+          <div class="divider"></div>
+          <h2 class="section-title">Une approche<br>patrimoniale globale.</h2>
+        </div>
+        <p class="services-intro">
+          Chaque stratégie est conçue à partir de votre situation, de vos objectifs et de votre horizon. Je mobilise l'ensemble de mes expertises pour construire un accompagnement cohérent et durable.
+        </p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card" id="services-immobilier">
+          <span class="service-num">01</span>
+          <h3 class="service-title">Investissement immobilier</h3>
+          <p class="service-body">Résidence principale, bien locatif, LMNP, SCPI. Défiscalisation immobilière : Girardin, Malraux, Monuments historiques.</p>
+          <img src="assets/maison.webp" alt="Maison illustrant les conseils en investissement immobilier (résidence principale, locatif, SCPI)" class="service-img" loading="lazy" width="1200" height="1200">
+        </div>
+
+        <div class="service-card" id="services-placements">
+          <span class="service-num">02</span>
+          <h3 class="service-title">Placements financiers</h3>
+          <p class="service-body">Je vous accompagne pour trouver le placement adapté à votre situation et vous faire bénéficier des avantages d'une gestion privée.</p>
+          <img src="assets/placement.webp" alt="Illustration des placements financiers et de la gestion privée" class="service-img" loading="lazy" width="1200" height="800">
+        </div>
+
+        <div class="service-card" id="services-defiscalisation">
+          <span class="service-num">03</span>
+          <h3 class="service-title">Défiscalisation</h3>
+          <p class="service-body">Réduire vos impôts avec des solutions adaptées, pour optimiser la structure de votre patrimoine dans la durée.</p>
+          <img src="assets/impots.webp" alt="Illustration de la défiscalisation et de l'optimisation fiscale du patrimoine" class="service-img" loading="lazy" width="823" height="463">
+        </div>
+
+        <div class="service-card" id="services-retraite">
+          <span class="service-num">04</span>
+          <h3 class="service-title">Retraite</h3>
+          <p class="service-body">Préparer votre retraite, calculer votre pension et mettre en place des revenus complémentaires pour une situation confortable.</p>
+          <img src="assets/retraite.webp" alt="Illustration de la préparation de la retraite et des revenus complémentaires" class="service-img" loading="lazy" width="1200" height="800">
+        </div>
+
+        <div class="service-card" id="services-succession">
+          <span class="service-num">05</span>
+          <h3 class="service-title">Succession</h3>
+          <p class="service-body">Protéger vos proches, préparer la transmission de votre patrimoine et anticiper les contraintes financières liées à celle-ci.</p>
+          <img src="assets/succession.webp" alt="Illustration de la transmission du patrimoine et de la succession" class="service-img" loading="lazy" width="1170" height="675">
+        </div>
+
+        <div class="service-card" id="services-accompagnement">
+          <span class="service-num">06</span>
+          <h3 class="service-title">Accompagnement sur-mesure</h3>
+          <p class="service-body">Professionnels : prêts pros, capitalisation, prévoyance. Tous publics : renégociation d'assurance emprunteur.</p>
+          <img src="assets/accompagnement.webp" alt="Illustration de l'accompagnement patrimonial sur-mesure" class="service-img" loading="lazy" width="1200" height="800">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Approche ───────────────────────────────────────── -->
+  <section id="approche" class="section">
+    <div class="container">
+      <p class="label">Ma méthode</p>
+      <div class="divider" style="background: rgba(181,146,90,.6)"></div>
+      <h2 class="section-title" style="max-width: 560px;">Quatre étapes pour une stratégie qui vous ressemble.</h2>
+      <div class="approche-grid">
+        <div class="approche-step">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Écoute</h3>
+          <p class="step-desc">Comprendre votre histoire, vos projets, vos contraintes et vos sensibilités avant toute recommandation.</p>
+        </div>
+        <div class="approche-step">
+          <div class="step-num">02</div>
+          <h3 class="step-title">Analyse</h3>
+          <p class="step-desc">Bilan complet de votre situation : financière, fiscale, patrimoniale, familiale et professionnelle.</p>
+        </div>
+        <div class="approche-step">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Recommandation</h3>
+          <p class="step-desc">Stratégie personnalisée, solutions comparées, scénarios projetés — sans conflit d'intérêts.</p>
+        </div>
+        <div class="approche-step">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Suivi</h3>
+          <p class="step-desc">Mise en œuvre coordonnée, arbitrages réguliers et accompagnement dans la durée.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Témoignages ────────────────────────────────────── -->
+  <section id="temoignages" class="section">
+    <div class="container">
+      <p class="label">Témoignages</p>
+      <div class="divider"></div>
+      <h2 class="section-title">La confiance,<br>par ceux qui me l'accordent.</h2>
+      <div class="temoignages-grid">
+        <div class="temoignage">
+          <p class="temoignage-quote">« Une approche à la fois pédagogique et rigoureuse. J'ai enfin compris les leviers concrets pour optimiser et transmettre mon patrimoine. »</p>
+          <div class="temoignage-author">
+            <span class="temoignage-name">Marie T.</span>
+            <span class="temoignage-role">Cadre supérieure</span>
+          </div>
+        </div>
+        <div class="temoignage">
+          <p class="temoignage-quote">« Disponibilité, clarté et vraie indépendance. Edith a profondément réorganisé ma stratégie d'épargne et mes contrats d'assurance-vie. »</p>
+          <div class="temoignage-author">
+            <span class="temoignage-name">Philippe D.</span>
+            <span class="temoignage-role">Chef d'entreprise</span>
+          </div>
+        </div>
+        <div class="temoignage">
+          <p class="temoignage-quote">« Un accompagnement humain, tourné vers le long terme. La différence est nette par rapport à ma banque. Je recommande sans hésiter. »</p>
+          <div class="temoignage-author">
+            <span class="temoignage-name">Sophie & Marc R.</span>
+            <span class="temoignage-role">Particuliers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ───────────────────────────────────────────── -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-sticky">
+          <p class="label">Questions fréquentes</p>
+          <div class="divider"></div>
+          <h2 class="section-title">Vous vous posez peut-être l'une de ces questions.</h2>
+          <p style="margin-top:1.5rem; font-size:.9rem; color:var(--ink3); line-height:1.75;">Vous ne trouvez pas la réponse ? N'hésitez pas à me contacter directement.</p>
+          <a href="#rendez-vous" class="btn-primary" style="margin-top:1.5rem; display:inline-flex;">Poser ma question</a>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              Qu'est-ce qu'un conseiller en gestion de patrimoine indépendant ?
+              <span class="faq-icon">+</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#about">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Domaines d’expertise</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contactez‑moi</a>
-                    </li>
-                </ul>
-                
-            </div>
+            <div class="faq-answer"><div class="faq-answer-inner">Un CGP indépendant n'est lié à aucune banque ni compagnie d'assurance. Il sélectionne librement les meilleures solutions du marché, sans grille produit imposée. Son alignement avec le client est total.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Pour qui est destiné cet accompagnement ?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Pour tous : salarié, fonctionnaire, indépendant ou chef d'entreprise. Que vous souhaitiez préparer votre retraite, investir, défiscaliser ou préparer une transmission, je construis une stratégie adaptée à votre situation réelle.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Le premier rendez-vous est-il payant ?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Non. Le premier échange est offert et sans engagement. Il sert à comprendre votre situation, vos objectifs, et à évaluer ensemble comment je peux vous accompagner au mieux.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Comment se déroule un suivi patrimonial ?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Après l'audit initial et la mise en place des recommandations, nous effectuons des points réguliers pour ajuster la stratégie selon l'évolution de votre vie, de vos objectifs et de la fiscalité.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Êtes-vous réglementée ?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Oui. J'exerce dans le cadre réglementaire de la gestion de patrimoine, immatriculée à <a href="https://www.orias.fr/home/showIntermediaire/411115660" target="_blank" rel="noopener" style="color: var(--gold);">l'ORIAS</a>, sous le contrôle de l'Autorité des Marchés Financiers (AMF) et de l'ACPR.</div></div>
+          </div>
         </div>
-    </nav>
-    <!-- main banner -->
-    <section class="bgimage" id="home">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
-                    <p class="hero_desc center-animation" id="awesomeAnimation"></p>
-            </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="name">Edith Berny</div>
+          <p class="tagline">Conseillère indépendante en gestion de patrimoine. Épargne, retraite, immobilier, optimisation et transmission.</p>
+          <span class="orias"><a href="https://www.orias.fr/home/showIntermediaire/411115660" target="_blank" rel="noopener">ORIAS #22002433</a></span>
         </div>
-    </section>
-
-    <!-- about section-->
-    <section id="about">
-        <div class="container mt-4 pt-4">
-            <h1 class="text-center">Qui suis-je?</h1>
-            <div class="row mt-4">
-                <div class="col-lg-4">
-                    <img src="images/profile_picture.jpg" class= "imageAboutPage" alt="Edith Berny - Conseillère en gestion de patrimoine" title="Edith Berny - Conseillère en gestion de patrimoine">
-                </div>
-
-                <div class="col-lg-8">
-                    <p> Je suis à votre écoute pour vous accompagner dans la construction, la gestion, l'optimisation et la transmission de votre patrimoine, en tant que conseillère indépendante.</p>
-                    <div class="mt-2">
-                        <h5 class="mb-2">En quelques mots</h5>
-                        <ul class="list-unstyled modern-list">
-                            <li><i class="fas fa-check-circle icon"></i><span>Indépendante, je travaille avec différents partenaires financiers et assureurs.</span></li>
-                        </ul>
-                        <h5 class="mb-2 mt-3">Pour qui</h5>
-                        <ul class="list-unstyled modern-list">
-                            <li><i class="fas fa-check-circle icon"></i><span>Pour tous ! Que vous soyez salarié, fonctionnaire ou indépendant.</span></li>
-                        </ul>
-                        <h5 class="mb-2 mt-3">Ce que je vous apporte</h5>
-                        <ul class="list-unstyled modern-list">
-                            <li><i class="fas fa-check-circle icon"></i><span>Mon expertise sur l’épargne, la retraite, l’assurance‑vie, l’immobilier et les investissements financiers, pour définir les meilleures stratégies d’optimisation de votre patrimoine.</span></li>
-                        </ul>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-11">
-                            <ul>
-                                <li>Nom: Edith Berny</li>
-                                <li>Age: <span id="age"></span></li>
-                                <li>Parcours professionnel: Conseillère en gestion de patrimoine depuis plusieurs années, j’accompagne aujourd’hui mes clients avec une expertise centrée sur l’épargne, la retraite et l’optimisation patrimoniale. Anciennement cheffe de cuisine, cette expérience m’a transmis des valeurs fortes — exigence, sens du service et leadership — que je mets au service de chaque accompagnement. 🤝 👩🏻‍💻</li>
-
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="social-icons mt-2 px-3">
-                                <!-- <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a> -->
-                                <!-- <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> -->
-                                <!-- <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> -->
-                                <a href="https://www.linkedin.com/in/edithberny/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                <!-- <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="row mt-3">
-                        <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        </p>
-                    </div> -->
-                </div>
-            </div>
-    </section>
-
-    <!-- portfolio section-->
-    <section id="services">
-        <div class="container mt-3">
-            <h1 class="text-center">domaines d'expertise</h1>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card">
-                        <img class="card-img-top fix-img-height" src="images/maison.jpg" alt="investissement immobilier">                    
-                        <div class="card-body fix-card-height">
-                            <h4 class="card-title">Investissement Immobilier</h4>
-                            <ul class="modern-list">
-                                <li><i class="fas fa-check-circle icon"></i><span>Achat résidence principale, bien locatif ou LMNP</span></li>
-                                <li><i class="fas fa-check-circle icon"></i><span>Défiscalisation : Girardin, Malraux, Monuments historiques</span></li>
-                                <li><i class="fas fa-check-circle icon"></i><span>SCPI…</span></li>
-                            </ul>
-                            <!-- <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top fix-img-height" src="images/placement.jpg" alt="placements financiers">
-                        <div class="card-body fix-card-height">
-                            <h4 class="card-title">Placements financiers</h4>
-                            <p class="card-text">Je vous accompagne pour trouver le meilleur placement qui vous convient, adapté à votre situation et vous faire bénéficier des avantages d'une gestion privée.</p>
-                            <!-- <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top fix-img-height" src="images/impots.jpeg" alt="défiscalisation">
-                        <div class="card-body fix-card-height">
-                            <h4 class="card-title">Défiscalisation</h4>
-                            <p class="card-text">Je vous aide à réduire vos impôts avec des solutions adaptées afin d'optimiser votre patrimoine.</p>
-                            <!-- <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top fix-img-height" src="images/retraite.jpg" alt="retraite">
-                        <div class="card-body fix-card-height">
-                            <h4 class="card-title">Retraite</h4>
-                            <p class="card-text">Pensez à préparer votre retraite. Calculez votre pension retraite et mettez en place des revenus complémentaires afin de profiter d'une situation confortable. </p>
-                            <!-- <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top fix-img-height" src="images/succession.jpeg" alt="succession">
-                        <div class="card-body fix-card-height">
-                            <h4 class="card-title">Succession</h4>
-                            <p class="card-text">Je vous aide à préparer votre succession tout en protégeant vos proches et à anticiper les contraintes financières liées à celle-ci.</p>
-                            <!-- <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolioContent">
-                        <img class="card-img-top fix-img-height" src="images/accompagnement.jpg" alt="accompagnement">
-                        <div class="card-body fix-card-height">
-                            <h4 class="card-title">Accompagnement</h4>
-                            <ul class="modern-list">
-                                <li><i class="fas fa-check-circle icon"></i><span>Professionnels : prêts pros, contrat de capitalisation, prévoyance…</span></li>
-                                <li><i class="fas fa-check-circle icon"></i><span>Tous publics : renégociation d’assurance emprunteur sur tout type de crédit</span></li>
-                            </ul>
-                            <!-- <div class="text-center">
-                                <a href="#" class="btn btn-success">Link</a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <!-- contact section-->
-    <section id="contact">
-        <div class="container mt-3 contactContent">
-            <h1 class="text-center">Contactez moi</h1>
-
-            <div class="row mt-4">
-                <div class="col-lg-6">
-                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
-                    <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;"><div id="googlemaps-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Meaux&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="googlemap-enabler" href="https://www.embed-map.com" id="grabmaps-authorization">https://www.embed-map.com</a><style>#googlemaps-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- form fields -->
-                    <form action="https://formspree.io/f/mnqwlrgo" method="POST">
-                        <input type="text" class="form-control form-control-lg" placeholder="Votre nom">
-                        <input type="email" class="form-control mt-3" placeholder="Email" name="email">
-                        <input type="text" class="form-control mt-3" placeholder="Sujet">
-                        <div class="mb-3 mt-3">
-                            <textarea class="form-control" rows="5" id="comment" name="message" placeholder="Détails de votre projet et/ou questions..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success mt-3">Envoyer</button>
-                    </form>
-                    
-                </div>
-
-            </div>
+        <div>
+          <p class="footer-col-title">Expertises</p>
+          <ul class="footer-links">
+            <li><a href="#services-immobilier">Investissement immobilier</a></li>
+            <li><a href="#services-placements">Placements financiers</a></li>
+            <li><a href="#services-defiscalisation">Défiscalisation</a></li>
+            <li><a href="#services-retraite">Retraite</a></li>
+            <li><a href="#services-succession">Succession</a></li>
+            <li><a href="#services-accompagnement">Accompagnement pro</a></li>
+          </ul>
         </div>
-    </section>
-    <!-- footer section-->
-    <footer id="footer">
-        <div class="container-fluid">
-            <!-- social media icons -->
-            <div class="social-icons mt-4">
-                <!-- <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a> -->
-                <!-- <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> -->
-                <!-- <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> -->
-                <a href="https://www.linkedin.com/in/edithberny/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <!-- <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a> -->
-            </div>
-            <div><p>Edith Berny - <span id="year"></span></p></div>
+        <div>
+          <p class="footer-col-title">Le cabinet</p>
+          <ul class="footer-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#approche">Mon approche</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#rendez-vous">Prendre rendez-vous</a></li>
+          </ul>
         </div>
-    </footer>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© <span id="year"></span> Edith Berny. Tous droits réservés.</span>
+        <a href="mentions-legales.html" class="footer-legal">Mentions légales</a>
+        <a href="politique-confidentialite.html" class="footer-legal">Politique de confidentialité</a>
+        <a href="sitemap.xml" class="footer-legal" target="_blank" rel="noopener">Plan du site</a>
+        <a href="https://www.linkedin.com/in/edithberny/" target="_blank" rel="noopener" class="footer-linkedin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
 
-    <!-- load javascript after loading all html content -->
-    <script src="script/script.js"></script>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script>const textField = document.getElementById('awesomeAnimation');
+  <!-- Scroll to top -->
+  <div id="scrolltop" role="button" aria-label="Retour en haut" tabindex="0">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6" stroke="#B5925A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
 
-        const typewriter = new Typewriter(textField, {
-            loop: true,
-            delay: 160,
-        });
-        
-        typewriter
-            .typeString(`<span>Conseillère indépendante en <br> Gestion de Patrimoine, Épargne et Retraite...</span>`)
-            .pauseFor(500)
-            .start()</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script type="text/javascript">var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img class="mobile-scroll" src="https://lh3.googleusercontent.com/pw/AM-JKLVRjjrvUbuCg65TbQ0af94dFSMGuSMy6_pI4DRYXhPRCSrUsskUO1unYqxhckxEXolNUhAxtJ9Hx2J23bfu_f2PxnNhlJuqClNcqpNX67URdlNhm6cEVhGtEJMkYYL27iPdcMjH6ETCLFRQTeGwQp2l=s48-no" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();</script>
+    const nav = document.getElementById('nav');
+    const scrollTop = document.getElementById('scrolltop');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+      scrollTop.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+    scrollTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+  <!-- ── Données structurées Schema.org ──────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "@id": "https://edithberny.netlify.app/#cabinet",
+    "name": "Edith Berny — Conseillère en gestion de patrimoine",
+    "alternateName": "Edith Berny CGP",
+    "url": "https://edithberny.netlify.app/",
+    "image": "https://edithberny.netlify.app/assets/profile_picture.webp",
+    "logo": "https://edithberny.netlify.app/assets/favicon/android-chrome-512x512.png",
+    "description": "Conseillère indépendante en gestion de patrimoine à Meaux et en Île-de-France. Stratégie d'investissement, fiscalité, transmission, retraite, immobilier.",
+    "email": "edith.berny@maisonblanchepatrimoine.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Meaux",
+      "postalCode": "77100",
+      "addressRegion": "Île-de-France",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Meaux" },
+      { "@type": "AdministrativeArea", "name": "Seine-et-Marne" },
+      { "@type": "AdministrativeArea", "name": "Île-de-France" }
+    ],
+    "serviceType": [
+      "Conseil en gestion de patrimoine",
+      "Conseil en investissements financiers",
+      "Courtage en assurances",
+      "Optimisation fiscale",
+      "Préparation de la retraite",
+      "Transmission de patrimoine",
+      "Investissement immobilier"
+    ],
+    "knowsAbout": [
+      "Assurance-vie",
+      "Assurance-vie luxembourgeoise",
+      "SCPI",
+      "LMNP",
+      "Loi Girardin",
+      "Loi Malraux",
+      "Monuments historiques",
+      "Défiscalisation",
+      "Succession",
+      "PER"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Immatriculation ORIAS",
+        "identifier": "22002433",
+        "url": "https://www.orias.fr/home/showIntermediaire/411115660"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Conseiller en Investissements Financiers (CIF)",
+        "recognizedBy": { "@type": "Organization", "name": "Autorité des Marchés Financiers (AMF)" }
+      }
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Maison Blanche Patrimoine",
+      "url": "https://www.maisonblanchepatrimoine.com/"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/edithberny/",
+      "https://share.google/9w6bGB4XbKCmkHkI8",
+      "https://www.orias.fr/home/showIntermediaire/411115660"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://edithberny.netlify.app/#edith-berny",
+    "name": "Edith Berny",
+    "givenName": "Edith",
+    "familyName": "Berny",
+    "jobTitle": "Conseillère en gestion privée",
+    "image": "https://edithberny.netlify.app/assets/profile_picture.webp",
+    "url": "https://edithberny.netlify.app/",
+    "worksFor": { "@id": "https://edithberny.netlify.app/#cabinet" },
+    "sameAs": [
+      "https://www.linkedin.com/in/edithberny/",
+      "https://share.google/9w6bGB4XbKCmkHkI8"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce qu'un conseiller en gestion de patrimoine indépendant ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un CGP indépendant n'est lié à aucune banque ni compagnie d'assurance. Il sélectionne librement les meilleures solutions du marché, sans grille produit imposée. Son alignement avec le client est total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pour qui est destiné cet accompagnement ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pour tous : salarié, fonctionnaire, indépendant ou chef d'entreprise. Que vous souhaitiez préparer votre retraite, investir, défiscaliser ou préparer une transmission, je construis une stratégie adaptée à votre situation réelle."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Le premier rendez-vous est-il payant ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Le premier échange est offert et sans engagement. Il sert à comprendre votre situation, vos objectifs, et à évaluer ensemble comment je peux vous accompagner au mieux."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment se déroule un suivi patrimonial ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Après l'audit initial et la mise en place des recommandations, nous effectuons des points réguliers pour ajuster la stratégie selon l'évolution de votre vie, de vos objectifs et de la fiscalité."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Êtes-vous réglementée ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. J'exerce dans le cadre réglementaire de la gestion de patrimoine, immatriculée à l'ORIAS sous le numéro 22002433, sous le contrôle de l'Autorité des Marchés Financiers (AMF) et de l'ACPR."
+        }
+      }
+    ]
+  }
+  </script>
 
 </body>
-
 </html>

@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edith Berny — Conseillère en gestion de patrimoine</title>
+  <meta name="description" content="Edith Berny, conseillère indépendante en gestion de patrimoine. Épargne, retraite, immobilier, défiscalisation, succession — Meaux et Île-de-France.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ───────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    :root {
+      --ivory:   #FAF8F5;
+      --ivory2:  #F3EFE9;
+      --stone:   #E8E2D9;
+      --gold:    #B5925A;
+      --gold-lt: #D4B483;
+      --ink:     #1A1A18;
+      --ink2:    #3D3C38;
+      --ink3:    #7A7870;
+      --white:   #FFFFFF;
+      --serif:   'Cormorant Garamond', Georgia, serif;
+      --sans:    'DM Sans', system-ui, sans-serif;
+      --max:     1240px;
+      --side:    clamp(1.5rem, 5vw, 5rem);
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--ivory);
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Typography ────────────────────────────────────────── */
+    .label {
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -.01em;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--ink);
+    }
+
+    /* ── Layout helpers ────────────────────────────────────── */
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--side);
+    }
+
+    .section {
+      padding: clamp(4rem, 8vw, 8rem) 0;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1.5rem 0;
+    }
+
+    /* ── Navigation ────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(250, 248, 245, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 var(--stone);
+      transition: background .4s ease, box-shadow .4s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(250, 248, 245, 0.98);
+      box-shadow: 0 1px 0 var(--stone);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--side);
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      gap: .1rem;
+    }
+    .nav-brand .name {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: .01em;
+    }
+    .nav-brand .sub {
+      font-size: .65rem;
+      font-weight: 400;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .875rem;
+      font-weight: 400;
+      color: var(--ink2);
+      letter-spacing: .02em;
+      position: relative;
+      transition: color .2s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width .25s ease;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .6rem 1.4rem;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .05em;
+      color: var(--gold) !important;
+      transition: background .2s, color .2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--white) !important;
+    }
+    .nav-cta::after { display: none !important; }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: .5rem;
+      background: none;
+      border: none;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 24px; height: 1.5px;
+      background: var(--ink);
+      transition: .3s;
+    }
+
+    /* ── Hero ──────────────────────────────────────────────── */
+    #home {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/fond2.png');
+      background-size: cover;
+      background-position: center 30%;
+      filter: brightness(.78) saturate(.9);
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 30%,
+        rgba(26,26,24,.55) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--side);
+      padding-bottom: clamp(4rem, 8vw, 7rem);
+      padding-top: 72px; /* compense la navbar visible dès le départ */
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold-lt);
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.1;
+      max-width: 720px;
+      margin-bottom: 1.75rem;
+    }
+    .hero-title em {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .hero-desc {
+      font-size: clamp(.9rem, 1.4vw, 1.05rem);
+      color: rgba(255,255,255,.82);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .85rem 2rem;
+      background: var(--gold);
+      color: var(--white);
+      font-size: .85rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      transition: background .2s, transform .2s;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: #a07d47;
+      border-color: #a07d47;
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .85rem 1.6rem;
+      border: 1px solid rgba(255,255,255,.5);
+      border-radius: 2px;
+      color: rgba(255,255,255,.9);
+      font-size: .85rem;
+      font-weight: 400;
+      letter-spacing: .04em;
+      transition: border-color .2s, color .2s;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,.9);
+      color: var(--white);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      margin-top: 4rem;
+      border-top: 1px solid rgba(255,255,255,.2);
+      padding-top: 2rem;
+    }
+
+    .hero-stat {
+      flex: 1;
+      min-width: 140px;
+      padding-right: 2rem;
+    }
+    .hero-stat + .hero-stat {
+      border-left: 1px solid rgba(255,255,255,.15);
+      padding-left: 2rem;
+    }
+    .hero-stat .val {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1;
+    }
+    .hero-stat .lbl {
+      font-size: .72rem;
+      color: rgba(255,255,255,.6);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-top: .4rem;
+    }
+
+    /* ── About ─────────────────────────────────────────────── */
+    #about {
+      background: var(--ivory);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-wrap img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .about-img-wrap::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: 20px;
+      bottom: 20px;
+      border: 1px solid var(--stone);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .about-img-wrap img { position: relative; z-index: 1; }
+
+    .about-text {}
+    .about-text .section-title { margin-bottom: 1rem; }
+
+    .about-intro {
+      font-size: clamp(1rem, 1.5vw, 1.1rem);
+      color: var(--ink2);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .pillar {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+    .pillar-num {
+      font-family: var(--serif);
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--gold);
+      padding-top: .1rem;
+    }
+    .pillar-title {
+      font-family: var(--sans);
+      font-size: .85rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+      color: var(--ink);
+      margin-bottom: .3rem;
+    }
+    .pillar-desc {
+      font-size: .875rem;
+      color: var(--ink3);
+      line-height: 1.65;
+    }
+
+    .about-meta {
+      border-top: 1px solid var(--stone);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 2rem;
+    }
+    .meta-item {
+      font-size: .82rem;
+      color: var(--ink3);
+    }
+    .meta-item strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin-top: 1.5rem;
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: .04em;
+      transition: opacity .2s;
+    }
+    .linkedin-link:hover { opacity: .75; }
+
+    /* ── Services ──────────────────────────────────────────── */
+    #services {
+      background: var(--ivory2);
+    }
+
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: end;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    .services-intro {
+      font-size: 1rem;
+      color: var(--ink3);
+      line-height: 1.75;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--stone);
+      border: 1px solid var(--stone);
+    }
+
+    .service-card {
+      background: var(--ivory);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: background .25s;
+      cursor: default;
+    }
+    .service-card:hover {
+      background: var(--white);
+    }
+
+    .service-num {
+      font-family: var(--serif);
+      font-size: .9rem;
+      color: var(--gold);
+    }
+
+    .service-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .service-body {
+      font-size: .875rem;
+      color: var(--ink3);
+      line-height: 1.7;
+    }
+
+    .service-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      margin-top: auto;
+      opacity: .85;
+      transition: opacity .3s;
+    }
+    .service-card:hover .service-img { opacity: 1; }
+
+    /* ── Approche ──────────────────────────────────────────── */
+    #approche {
+      background: var(--ink);
+      color: var(--ivory);
+    }
+
+    #approche .label { color: var(--gold-lt); }
+    #approche .section-title { color: var(--ivory); }
+
+    .approche-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: clamp(3rem, 5vw, 4.5rem);
+    }
+
+    .approche-step {
+      padding: 2.5rem 2rem 2.5rem 0;
+      border-left: 1px solid rgba(255,255,255,.1);
+      padding-left: 2rem;
+    }
+    .approche-step:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    .step-num {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      font-weight: 400;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 1.25rem;
+      opacity: .85;
+    }
+
+    .step-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--ivory);
+      margin-bottom: .75rem;
+    }
+
+    .step-desc {
+      font-size: .875rem;
+      color: rgba(255,255,255,.55);
+      line-height: 1.75;
+    }
+
+    /* ── Temoignages ───────────────────────────────────────── */
+    #temoignages {
+      background: var(--ivory);
+    }
+
+    .temoignages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: clamp(3rem, 5vw, 4rem);
+    }
+
+    .temoignage {
+      background: var(--white);
+      padding: 2.5rem;
+      border: 1px solid var(--stone);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .temoignage-quote {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    .temoignage-author {
+      display: flex;
+      flex-direction: column;
+      gap: .2rem;
+      border-top: 1px solid var(--stone);
+      padding-top: 1rem;
+    }
+    .temoignage-name {
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .temoignage-role {
+      font-size: .75rem;
+      color: var(--ink3);
+      letter-spacing: .04em;
+    }
+
+    /* ── FAQ ───────────────────────────────────────────────── */
+    #faq {
+      background: var(--ivory2);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+
+    .faq-sticky { position: sticky; top: 100px; }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--stone);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      cursor: pointer;
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--ink);
+      transition: color .2s;
+      list-style: none;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+    }
+    .faq-question:hover { color: var(--gold); }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      border: 1px solid var(--stone);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      color: var(--gold);
+      transition: transform .3s, background .2s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--gold); color: var(--white); border-color: var(--gold); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, padding .3s;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+    .faq-answer-inner {
+      padding: 0 0 1.5rem 0;
+      font-size: .9rem;
+      color: var(--ink3);
+      line-height: 1.75;
+    }
+
+    /* ── Contact ───────────────────────────────────────────── */
+    #contact {
+      background: var(--ivory);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+
+    .contact-info { }
+
+    .contact-desc {
+      font-size: 1rem;
+      color: var(--ink3);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+      max-width: 400px;
+    }
+
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .contact-row-icon {
+      width: 1.2rem;
+      margin-top: .2rem;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+    .contact-row-text {
+      font-size: .9rem;
+      color: var(--ink2);
+      line-height: 1.5;
+    }
+
+    .map-wrap {
+      border: 1px solid var(--stone);
+      overflow: hidden;
+      height: 260px;
+      margin-top: 2rem;
+    }
+    .map-wrap iframe {
+      width: 100%; height: 100%;
+      border: 0;
+      filter: saturate(.8) contrast(.9);
+    }
+
+    /* Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .form-field label {
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
+    .form-field input,
+    .form-field textarea {
+      padding: .85rem 1rem;
+      border: 1px solid var(--stone);
+      background: var(--white);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: .9rem;
+      border-radius: 0;
+      outline: none;
+      transition: border-color .2s;
+      -webkit-appearance: none;
+    }
+    .form-field input:focus,
+    .form-field textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-field textarea { resize: vertical; min-height: 130px; }
+
+    .form-submit {
+      align-self: flex-start;
+    }
+
+    /* ── Footer ────────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      color: var(--ivory);
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: clamp(3rem, 5vw, 5rem) var(--side) 2rem;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .footer-brand .name {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--ivory);
+      margin-bottom: .4rem;
+    }
+    .footer-brand .tagline {
+      font-size: .82rem;
+      color: rgba(255,255,255,.45);
+      line-height: 1.65;
+      max-width: 300px;
+      margin-bottom: 1.5rem;
+    }
+    .footer-brand .orias {
+      font-size: .72rem;
+      letter-spacing: .06em;
+      color: rgba(255,255,255,.3);
+      text-transform: uppercase;
+    }
+
+    .footer-col-title {
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .7rem;
+    }
+    .footer-links a {
+      font-size: .85rem;
+      color: rgba(255,255,255,.55);
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--ivory); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 2rem;
+    }
+    .footer-copy {
+      font-size: .78rem;
+      color: rgba(255,255,255,.3);
+    }
+    .footer-linkedin {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .78rem;
+      color: rgba(255,255,255,.45);
+      transition: color .2s;
+    }
+    .footer-linkedin:hover { color: var(--ivory); }
+
+    /* ── Scroll to top ─────────────────────────────────────── */
+    #scrolltop {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px; height: 44px;
+      border: 1px solid var(--stone);
+      background: var(--ivory);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .3s, transform .3s, background .2s;
+      z-index: 50;
+    }
+    #scrolltop.visible { opacity: 1; transform: translateY(0); }
+    #scrolltop:hover { background: var(--gold); border-color: var(--gold); }
+    #scrolltop:hover svg path { stroke: white; }
+
+    /* ── Responsive ────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-wrap::before { display: none; }
+      .about-img-wrap img { aspect-ratio: 16/9; }
+      .services-header { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .approche-grid { grid-template-columns: 1fr 1fr; }
+      .temoignages-grid { grid-template-columns: 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .faq-sticky { position: static; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 72px 0 0 0;
+        background: var(--ivory);
+        padding: 2rem var(--side);
+        gap: 1.5rem;
+        align-items: flex-start;
+        border-top: 1px solid var(--stone);
+      }
+      .nav-links.open .nav-cta {
+        color: var(--gold) !important;
+        border-color: var(--gold);
+      }
+      .nav-toggle { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .approche-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .approche-step { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,.1); padding-top: 2rem; }
+      .approche-step:first-child { border-top: none; padding-top: 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .hero-stats { flex-direction: column; gap: 1.5rem; }
+      .hero-stat + .hero-stat { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,.15); padding-top: 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── Navigation ────────────────────────────────────── -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">
+        <span class="name">Edith Berny</span>
+        <span class="sub">Gestion de patrimoine</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#services">Expertises</a></li>
+        <li><a href="#approche">Approche</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Prendre rendez-vous</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Hero ──────────────────────────────────────────── -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title">L'expertise d'une <em>conseillère privée,</em><br>à votre écoute.</h1>
+      <p class="hero-eyebrow">Conseillère indépendante en gestion de patrimoine</p>
+      <p class="hero-desc">Construire, optimiser, transmettre votre patrimoine — avec rigueur, indépendance et discrétion.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Prendre rendez-vous</a>
+        <a href="#about" class="btn-ghost">Découvrir mon approche</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="val">100%</div>
+          <div class="lbl">Indépendante</div>
+        </div>
+        <div class="hero-stat">
+          <div class="val">Tous profils</div>
+          <div class="lbl">Salariés, indépendants, fonctionnaires</div>
+        </div>
+        <div class="hero-stat">
+          <div class="val">Île-de-France</div>
+          <div class="lbl">Basée à Meaux</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── À propos ───────────────────────────────────────── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img src="images/profile_picture.jpg" alt="Edith Berny — Conseillère en gestion de patrimoine" loading="lazy">
+        </div>
+        <div class="about-text">
+          <p class="label">À propos</p>
+          <div class="divider"></div>
+          <h2 class="section-title">Votre patrimoine,<br><em>ma priorité.</em></h2>
+          <p class="about-intro">
+            Je suis à votre écoute pour vous accompagner dans la construction, la gestion, l'optimisation et la transmission de votre patrimoine, en tant que conseillère indépendante.
+          </p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <span class="pillar-num">01</span>
+              <div>
+                <div class="pillar-title">Indépendance totale</div>
+                <p class="pillar-desc">Je travaille avec différents partenaires financiers et assureurs, sans conflit d'intérêts. Votre intérêt prime toujours.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <span class="pillar-num">02</span>
+              <div>
+                <div class="pillar-title">Pour tous les profils</div>
+                <p class="pillar-desc">Salarié, fonctionnaire, indépendant ou chef d'entreprise — chaque situation mérite une stratégie sur-mesure.</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <span class="pillar-num">03</span>
+              <div>
+                <div class="pillar-title">Expertise pluridisciplinaire</div>
+                <p class="pillar-desc">Épargne, retraite, assurance-vie, immobilier, investissements financiers — une vision globale pour les meilleures stratégies d'optimisation.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-meta">
+            <span class="meta-item"><strong>Edith Berny</strong></span>
+            <span class="meta-item">Meaux, Île-de-France</span>
+            <span class="meta-item">Anciennement cheffe de cuisine</span>
+          </div>
+          <a href="https://www.linkedin.com/in/edithberny/" target="_blank" class="linkedin-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            Voir mon profil LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Expertises ─────────────────────────────────────── -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="services-header">
+        <div>
+          <p class="label">Domaines d'expertise</p>
+          <div class="divider"></div>
+          <h2 class="section-title">Une approche<br>patrimoniale globale.</h2>
+        </div>
+        <p class="services-intro">
+          Chaque stratégie est conçue à partir de votre situation, de vos objectifs et de votre horizon. Je mobilise l'ensemble de mes expertises pour construire un accompagnement cohérent et durable.
+        </p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <span class="service-num">01</span>
+          <h3 class="service-title">Investissement immobilier</h3>
+          <p class="service-body">Résidence principale, bien locatif, LMNP, SCPI. Défiscalisation immobilière : Girardin, Malraux, Monuments historiques.</p>
+          <img src="images/maison.jpg" alt="Investissement immobilier" class="service-img" loading="lazy">
+        </div>
+
+        <div class="service-card">
+          <span class="service-num">02</span>
+          <h3 class="service-title">Placements financiers</h3>
+          <p class="service-body">Je vous accompagne pour trouver le placement adapté à votre situation et vous faire bénéficier des avantages d'une gestion privée.</p>
+          <img src="images/placement.jpg" alt="Placements financiers" class="service-img" loading="lazy">
+        </div>
+
+        <div class="service-card">
+          <span class="service-num">03</span>
+          <h3 class="service-title">Défiscalisation</h3>
+          <p class="service-body">Réduire vos impôts avec des solutions adaptées, pour optimiser la structure de votre patrimoine dans la durée.</p>
+          <img src="images/impots.jpeg" alt="Défiscalisation" class="service-img" loading="lazy">
+        </div>
+
+        <div class="service-card">
+          <span class="service-num">04</span>
+          <h3 class="service-title">Retraite</h3>
+          <p class="service-body">Préparer votre retraite, calculer votre pension et mettre en place des revenus complémentaires pour une situation confortable.</p>
+          <img src="images/retraite.jpg" alt="Retraite" class="service-img" loading="lazy">
+        </div>
+
+        <div class="service-card">
+          <span class="service-num">05</span>
+          <h3 class="service-title">Succession</h3>
+          <p class="service-body">Protéger vos proches, préparer la transmission de votre patrimoine et anticiper les contraintes financières liées à celle-ci.</p>
+          <img src="images/succession.jpeg" alt="Succession" class="service-img" loading="lazy">
+        </div>
+
+        <div class="service-card">
+          <span class="service-num">06</span>
+          <h3 class="service-title">Accompagnement sur-mesure</h3>
+          <p class="service-body">Professionnels : prêts pros, capitalisation, prévoyance. Tous publics : renégociation d'assurance emprunteur.</p>
+          <img src="images/accompagnement.jpg" alt="Accompagnement" class="service-img" loading="lazy">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Approche ───────────────────────────────────────── -->
+  <section id="approche" class="section">
+    <div class="container">
+      <p class="label">Ma méthode</p>
+      <div class="divider" style="background: rgba(181,146,90,.6)"></div>
+      <h2 class="section-title" style="max-width: 560px;">Quatre étapes pour une stratégie qui vous ressemble.</h2>
+      <div class="approche-grid">
+        <div class="approche-step">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Écoute</h3>
+          <p class="step-desc">Comprendre votre histoire, vos projets, vos contraintes et vos sensibilités avant toute recommandation.</p>
+        </div>
+        <div class="approche-step">
+          <div class="step-num">02</div>
+          <h3 class="step-title">Analyse</h3>
+          <p class="step-desc">Bilan complet de votre situation : financière, fiscale, patrimoniale, familiale et professionnelle.</p>
+        </div>
+        <div class="approche-step">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Recommandation</h3>
+          <p class="step-desc">Stratégie personnalisée, solutions comparées, scénarios projetés — sans conflit d'intérêts.</p>
+        </div>
+        <div class="approche-step">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Suivi</h3>
+          <p class="step-desc">Mise en œuvre coordonnée, arbitrages réguliers et accompagnement dans la durée.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Témoignages ────────────────────────────────────── -->
+  <section id="temoignages" class="section">
+    <div class="container">
+      <p class="label">Témoignages</p>
+      <div class="divider"></div>
+      <h2 class="section-title">La confiance,<br>par ceux qui me l'accordent.</h2>
+      <div class="temoignages-grid">
+        <div class="temoignage">
+          <p class="temoignage-quote">« Une approche à la fois pédagogique et rigoureuse. J'ai enfin compris les leviers concrets pour optimiser et transmettre mon patrimoine. »</p>
+          <div class="temoignage-author">
+            <span class="temoignage-name">Marie T.</span>
+            <span class="temoignage-role">Cadre supérieure</span>
+          </div>
+        </div>
+        <div class="temoignage">
+          <p class="temoignage-quote">« Disponibilité, clarté et vraie indépendance. Edith a profondément réorganisé ma stratégie d'épargne et mes contrats d'assurance-vie. »</p>
+          <div class="temoignage-author">
+            <span class="temoignage-name">Philippe D.</span>
+            <span class="temoignage-role">Chef d'entreprise</span>
+          </div>
+        </div>
+        <div class="temoignage">
+          <p class="temoignage-quote">« Un accompagnement humain, tourné vers le long terme. La différence est nette par rapport à ma banque. Je recommande sans hésiter. »</p>
+          <div class="temoignage-author">
+            <span class="temoignage-name">Sophie & Marc R.</span>
+            <span class="temoignage-role">Particuliers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ───────────────────────────────────────────── -->
+  <section id="faq" class="section">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-sticky">
+          <p class="label">Questions fréquentes</p>
+          <div class="divider"></div>
+          <h2 class="section-title">Vous vous posez peut-être l'une de ces questions.</h2>
+          <p style="margin-top:1.5rem; font-size:.9rem; color:var(--ink3); line-height:1.75;">Vous ne trouvez pas la réponse ? N'hésitez pas à me contacter directement.</p>
+          <a href="#contact" class="btn-primary" style="margin-top:1.5rem; display:inline-flex;">Poser ma question</a>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              Qu'est-ce qu'un conseiller en gestion de patrimoine indépendant ?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Un CGP indépendant n'est lié à aucune banque ni compagnie d'assurance. Il sélectionne librement les meilleures solutions du marché, sans grille produit imposée. Son alignement avec le client est total.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Pour qui est destiné cet accompagnement ?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Pour tous : salarié, fonctionnaire, indépendant ou chef d'entreprise. Que vous souhaitiez préparer votre retraite, investir, défiscaliser ou préparer une transmission, je construis une stratégie adaptée à votre situation réelle.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Le premier rendez-vous est-il payant ?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Non. Le premier échange est offert et sans engagement. Il sert à comprendre votre situation, vos objectifs, et à évaluer ensemble comment je peux vous accompagner au mieux.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Comment se déroule un suivi patrimonial ?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Après l'audit initial et la mise en place des recommandations, nous effectuons des points réguliers pour ajuster la stratégie selon l'évolution de votre vie, de vos objectifs et de la fiscalité.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              Êtes-vous réglementée ?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer"><div class="faq-answer-inner">Oui. J'exerce dans le cadre réglementaire de la gestion de patrimoine, immatriculée à l'ORIAS, sous le contrôle de l'Autorité des Marchés Financiers (AMF) et de l'ACPR.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ────────────────────────────────────────── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="label">Contact</p>
+          <div class="divider"></div>
+          <h2 class="section-title">Un premier échange,<br><em>en toute confiance.</em></h2>
+          <p class="contact-desc">
+            Discret, sans engagement, dédié à votre situation. Je prends le temps de comprendre vos objectifs avant toute recommandation.
+          </p>
+          <div class="contact-detail">
+            <div class="contact-row">
+              <svg class="contact-row-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="contact-row-text">Meaux, Île-de-France</span>
+            </div>
+            <div class="contact-row">
+              <svg class="contact-row-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span class="contact-row-text">Via le formulaire ci-contre</span>
+            </div>
+            <div class="contact-row">
+              <svg class="contact-row-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <a href="https://www.linkedin.com/in/edithberny/" target="_blank" class="contact-row-text" style="color: var(--gold);">linkedin.com/in/edithberny</a>
+            </div>
+          </div>
+          <div class="map-wrap">
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=Meaux&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" title="Localisation Meaux" loading="lazy"></iframe>
+          </div>
+        </div>
+        <div>
+          <form action="https://formspree.io/f/mnqwlrgo" method="POST" class="contact-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.fr" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="sujet">Sujet</label>
+              <input type="text" id="sujet" name="sujet" placeholder="Objet de votre demande">
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Décrivez votre situation et vos objectifs..."></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn-primary">Envoyer le message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="name">Edith Berny</div>
+          <p class="tagline">Conseillère indépendante en gestion de patrimoine. Épargne, retraite, immobilier, optimisation et transmission.</p>
+          <span class="orias">ORIAS #22002433</span>
+        </div>
+        <div>
+          <p class="footer-col-title">Expertises</p>
+          <ul class="footer-links">
+            <li><a href="#services">Investissement immobilier</a></li>
+            <li><a href="#services">Placements financiers</a></li>
+            <li><a href="#services">Défiscalisation</a></li>
+            <li><a href="#services">Retraite</a></li>
+            <li><a href="#services">Succession</a></li>
+            <li><a href="#services">Accompagnement pro</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Le cabinet</p>
+          <ul class="footer-links">
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#approche">Mon approche</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Prendre rendez-vous</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© <span id="year"></span> Edith Berny. Tous droits réservés.</span>
+        <a href="https://www.linkedin.com/in/edithberny/" target="_blank" class="footer-linkedin">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <div id="scrolltop" role="button" aria-label="Retour en haut">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+      <path d="M18 15l-6-6-6 6" stroke="#B5925A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+      document.getElementById('scrolltop').classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    // Mobile menu
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+    // Scroll to top
+    document.getElementById('scrolltop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Smooth nav link scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
