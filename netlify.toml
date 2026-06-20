@@ -28,7 +28,7 @@
     Cache-Control = "public, max-age=3600"
 
 [[redirects]]
-  from = "https://www.edithberny.netlify.app/*"
-  to = "https://edithberny.netlify.app/:splat"
+  from = "https://www.edithberny.fr/*"
+  to = "https://edithberny.fr/:splat"
   status = 301
   force = true

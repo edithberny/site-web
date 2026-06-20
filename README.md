@@ -3,7 +3,7 @@
 Site web statique présentant l'activité d'**Edith Berny**, conseillère
 indépendante en gestion de patrimoine basée à Meaux (Île-de-France).
 
-Site en ligne : [edithberny.netlify.app](https://edithberny.netlify.app)
+Site en ligne : [edithberny.fr](https://edithberny.fr)
 
 ## Aperçu
 
@@ -57,7 +57,7 @@ site-web/
 ## Déploiement
 
 Le site est hébergé sur **[Netlify](https://www.netlify.com/)** à
-l'URL [edithberny.netlify.app](https://edithberny.netlify.app). Tout
+l'URL [edithberny.fr](https://edithberny.fr). Tout
 push sur la branche principale du dépôt déclenche automatiquement un
 nouveau déploiement.
 
